@@ -1,0 +1,126 @@
+.workspace {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+}
+.workspace-sidebar {
+  align-self: start;
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding: 38px 20px;
+  background: #151411;
+  border-right: 1px solid var(--line);
+}
+.supplier-switch label,
+.nav-heading {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.supplier-switch select {
+  font-weight: 650;
+}
+.workspace-sidebar nav {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+.workspace-sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #5b4525;
+  border-radius: 7px;
+  color: var(--gold);
+  background: #302719;
+  text-decoration: none;
+  font-weight: 600;
+}
+.workspace-sidebar nav a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 6px);
+  gap: 2px;
+}
+.nav-grid i {
+  height: 6px;
+  border: 1px solid currentColor;
+  border-radius: 1px;
+}
+.workspace-content {
+  min-width: 0;
+}
+.workspace-content main {
+  width: min(100% - 64px, 940px);
+  margin-inline: auto;
+  padding-block: clamp(36px, 5vw, 72px);
+}
+.configurator > .budget-row {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.configurator .parts-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin: 32px 0 12px;
+}
+.parts-heading h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.parts-heading span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+.configurator > div:has(select) {
+  border-inline: 1px solid var(--line);
+}
+.configurator .parts-heading + div {
+  border-top: 1px solid var(--line);
+  border-radius: 10px 10px 0 0;
+}
+.configurator > div:has(+ section) {
+  border-radius: 0 0 10px 10px;
+}
+@media (max-width: 760px) {
+  .workspace {
+    display: block;
+  }
+  .workspace-sidebar {
+    position: static;
+    height: auto;
+    padding: 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .workspace-sidebar nav {
+    margin-top: 14px;
+    padding-top: 0;
+    border: 0;
+  }
+  .workspace-sidebar .nav-heading {
+    display: none;
+  }
+  .workspace-sidebar nav a {
+    width: fit-content;
+    min-height: 40px;
+  }
+  .workspace-content main {
+    width: calc(100% - 32px);
+    padding-block: 28px;
+  }
+}

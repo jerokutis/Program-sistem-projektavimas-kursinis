@@ -1,0 +1,45 @@
+.supplier-form,
+.supplier-card {
+  display: grid;
+  gap: 10px;
+  max-width: 620px;
+  padding: 20px;
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.supplier-form h2,
+.supplier-card h3,
+.supplier-card p {
+  margin: 0;
+}
+
+.supplier-form button {
+  justify-self: start;
+  margin-top: 6px;
+}
+
+.supplier-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.workspace-sidebar nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 6px 0;
+  text-align: left;
+  background: transparent;
+  color: var(--muted);
+}
+
+.workspace-sidebar nav button[aria-pressed='true'] {
+  color: var(--gold);
+  background: #302719;
+  border-color: #5b4525;
+}
